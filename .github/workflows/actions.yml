@@ -15,4 +15,4 @@ jobs:
       - name: Log Greeting time
         #Stampo l'output dell'azione con la notazione ${{}}. Steps è una variabile di github actions
         #time è il nome della variabile che contiene l'output in questa specifica azione (vedi documentation)
-        run: echo "${{ steps.id.greets.time }}"
+        run: echo "${{ steps.greets.outputs.time }}"

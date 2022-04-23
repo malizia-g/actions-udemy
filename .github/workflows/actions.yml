@@ -9,7 +9,13 @@ jobs:
       - name: List Files
         run: |
           pwd
-          ls
+          ls -a
+      - name: Checkout
+        #Questa azione fa un fetch del repository corrente e fa il checkout del commit che ha scatenato la action corrente
+        uses: actions/checkout@v1 
+        run: |
+          pwd
+          ls -a
       - name: Simple JS Actions
         id: greets
         #Un'azione può essere importata da un repo pubblico

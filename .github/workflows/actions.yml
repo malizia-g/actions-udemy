@@ -1,0 +1,18 @@
+name: Actions Workflow
+
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Actions
+        id: greet
+        #Un'azione può essere importata da un repo pubblico
+        uses: actions/hello-world-javascript-action@v1 
+        with: #Qui specifico gli input dell'action
+          who-to-greet: John #Questo è un parametro specifico dell'azione
+      - name: Log Greeting time
+        #Stampo l'output dell'azione con la notazione ${{}}. Steps è una variabile di github actions
+        #time è il nome della variabile che contiene l'output in questa specifica azione (vedi documentation)
+        run: echo "${{ steps.id.greets.time }}"

@@ -12,7 +12,8 @@ jobs:
           ls -a
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
-          echo $GITHB_WORKSPACE
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
       - name: Checkout
         #Questa azione fa un fetch del repository corrente e fa il checkout del commit che ha scatenato la action corrente
         uses: actions/checkout@v1 

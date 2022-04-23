@@ -13,6 +13,7 @@ jobs:
       - name: Checkout
         #Questa azione fa un fetch del repository corrente e fa il checkout del commit che ha scatenato la action corrente
         uses: actions/checkout@v1 
+      - name: List Files Again
         run: |
           pwd
           ls -a

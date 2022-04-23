@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Simple JS Actions
-        id: greet
+        id: greets
         #Un'azione può essere importata da un repo pubblico
         uses: actions/hello-world-javascript-action@v1 
         with: #Qui specifico gli input dell'action

@@ -1,6 +1,19 @@
 name: Actions Workflow
 
-on: [push, pull_request]
+on: 
+  push:  #Specify some filter on which run the jobs
+    branches:   
+      - master
+      - 'feature/*' #matches all the patterns feature/featA ... 
+      - 'feature/**' #matches all the patterns feature/blabla/featA ... 
+      - '!feature/featC' #this feature will be ignored
+    tags:
+      - v1.*
+    
+    paths:
+      - '**.js'  #The workflow will run just with pushing .js files
+    
+    
 
 jobs:
   run-github-actions:

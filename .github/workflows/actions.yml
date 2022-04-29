@@ -1,7 +1,7 @@
 name: Actions Workflow
 
 on: 
-  push:  #Specify some filter on which run the jobs
+  pull_request:  #Specify some filter on which run the jobs
     branches:   
       - master
       - 'feature/*' #matches all the patterns feature/featA ... 
